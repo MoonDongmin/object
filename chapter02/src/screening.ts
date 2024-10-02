@@ -18,8 +18,8 @@ export class Screening {
     }
 
 
-    private calculateFee(audience: number): Money {
-        return this.movie.calculateMovieFee(this).times(audience);
+    private calculateFee(audienceCount: number): Money {
+        return this.movie.calculateMovieFee(this).times(audienceCount);
     }
 
     public getStartTime(): Date {

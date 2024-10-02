@@ -1,6 +1,7 @@
-import {Money}          from "./money";
-import {Screening}      from "./screening";
-import {DiscountPolicy} from "./discountPolicy";
+import {Money}                 from "./money";
+import {Screening}             from "./screening";
+import {DefaultDiscountPolicy} from "./defaultDiscountPolicy";
+import {DiscountPolicy}        from "./discountPolicy";
 
 export class Movie {
     private title: string;
@@ -8,7 +9,7 @@ export class Movie {
     private fee: Money;
     private discountPolicy: DiscountPolicy;
 
-    constructor(title: string, runningTime: number, fee: Money, discountPolicy: DiscountPolicy) {
+    constructor(title: string, runningTime: number, fee: Money, discountPolicy: DefaultDiscountPolicy) {
         this.title = title;
         this.runningTime = runningTime;
         this.fee = fee;
@@ -20,6 +21,13 @@ export class Movie {
     }
 
     public calculateMovieFee(screening: Screening): Money {
+        if (this.discountPolicy === null) {
+            return this.fee;
+        }
         return this.fee.minus(this.discountPolicy.calculateDiscountAmount(screening));
+    }
+
+    public changeDiscountPolicy(discountPolicy: DiscountPolicy): void {
+        this.discountPolicy = discountPolicy;
     }
 }

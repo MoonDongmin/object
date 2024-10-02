@@ -11,15 +11,15 @@ export class Money {
     }
 
     public plus(amount: Money): Money {
-        return new Money(this.amount.add(amount.amount));
+        return new Money(this.amount + amount.amount);
     }
 
     public minus(amount: Money): Money {
-        return new Money(this.amount.substract(amount.amount));
+        return new Money(this.amount - amount.amount);
     }
 
     public times(percent: number): Money {
-        return new Money(this.amount.multiply(percent));
+        return new Money(this.amount * percent);
     }
 
     public isLessThan(other: Money): boolean {

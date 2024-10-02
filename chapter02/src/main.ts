@@ -5,6 +5,7 @@ import {SequenceCondition}     from "./sequenceCondition";
 import {PeriodCondition}       from "./periodCondition/periodCondition";
 import {LocalTime}             from "./periodCondition/localTime";
 import {PercentDiscountPolicy} from "./percentDiscountPolicy";
+import {NoneDiscountPolicy}    from "./noneDiscountPolicy";
 
 export enum DayOfWeek {
     SUNDAY = 0, // 일요일
@@ -22,8 +23,12 @@ const avator: Movie = new Movie("아바타", 120, Money.wons(10000), new AmountD
     new PeriodCondition(DayOfWeek.MONDAY, LocalTime.of(10, 0), LocalTime.of(11, 59)),
     new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(20, 59))));
 
+avator.changeDiscountPolicy(new PercentDiscountPolicy(0.1, ...));
+
 const titanic: Movie = new Movie("타이타닉", 180, Money.wons(11000),
     new PercentDiscountPolicy(0.1,
         new PeriodCondition(DayOfWeek.TUESDAY, LocalTime.of(14, 0), LocalTime.of(16, 59)),
         new SequenceCondition(2),
         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(13, 59))));
+
+const starWars = new Movie("스타워즈", 210, Money.wons(10000), new NoneDiscountPolicy());
