@@ -12,6 +12,8 @@ height="40px"/></a>
 <br>
 
 ## "오브젝트"
-[01장. 객체, 설계](https://moondongmin.notion.site/01-109357c44e5680e5891ded57604a8819?pvs=4)
+[Chapter 01. 객체, 설계](https://moondongmin.notion.site/01-109357c44e5680e5891ded57604a8819?pvs=4)
 
-[02장. 객체지향 프로그래밍](https://www.notion.so/moondongmin/02-111357c44e5680a2b05ff8c6a7760e5c?pvs=4)
+[Chapter 02. 객체지향 프로그래밍](https://www.notion.so/moondongmin/02-111357c44e5680a2b05ff8c6a7760e5c?pvs=4)
+
+[Chapter 04. 설계 품질과 트레이드오프](https://moondongmin.notion.site/Chapter-04-11b357c44e5680f5965be9efec7aa22f?pvs=4)
