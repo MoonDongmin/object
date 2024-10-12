@@ -1,7 +1,7 @@
 import {DefaultDiscountPolicy} from "./defaultDiscountPolicy";
 import {DiscountCondition}     from "./discountCondition";
-import {Screening}         from "./screening";
-import {Money}             from "./money";
+import {Screening}             from "./screening";
+import {Money}                 from "./money";
 
 export class PercentDiscountPolicy extends DefaultDiscountPolicy {
     private percent: number;
@@ -12,7 +12,7 @@ export class PercentDiscountPolicy extends DefaultDiscountPolicy {
     }
 
     //override
-    protected getDiscountAmount(screening: Screening): Money {
+    protected override getDiscountAmount(screening: Screening): Money {
         return screening.getMovieFee().times(this.percent);
     }
 }

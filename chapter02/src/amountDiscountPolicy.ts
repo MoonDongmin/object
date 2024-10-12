@@ -1,7 +1,7 @@
 import {DefaultDiscountPolicy} from "./defaultDiscountPolicy";
 import {Money}                 from "./money";
-import {DiscountCondition} from "./discountCondition";
-import {Screening}         from "./screening";
+import {DiscountCondition}     from "./discountCondition";
+import {Screening}             from "./screening";
 
 export class AmountDiscountPolicy extends DefaultDiscountPolicy {
     private discountAmount: Money;
@@ -12,7 +12,7 @@ export class AmountDiscountPolicy extends DefaultDiscountPolicy {
     }
 
     // override
-    protected getDiscountAmount(screening: Screening): Money {
+    protected override getDiscountAmount(screening: Screening): Money {
         return this.discountAmount;
     }
 
