@@ -19,3 +19,5 @@ height="40px"/></a>
 [Chapter 04. 설계 품질과 트레이드오프](https://moondongmin.notion.site/Chapter-04-11b357c44e5680f5965be9efec7aa22f?pvs=4)
 
 [Chapter 05. 책임 할당하기](https://moondongmin.notion.site/Chapter-05-11c357c44e5680738990dc3b6d04b381?pvs=4)
+
+[Chapter 07. 객체 분해](https://www.notion.so/moondongmin/Chapter-07-125357c44e5680ceae02ece881f0fe61?pvs=4)
