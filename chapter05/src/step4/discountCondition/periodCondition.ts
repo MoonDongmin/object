@@ -1,7 +1,7 @@
-import {Screening} from "../screening";
+import {Screening}         from "../screening";
 import {DiscountCondition} from "./discountCondition";
 
-export class PeriodCondition implements DiscountCondition{
+export class PeriodCondition implements DiscountCondition {
     private dayOfWeek: number;
     private startTime: Date;
     private endTime: Date;

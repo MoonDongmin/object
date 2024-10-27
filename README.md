@@ -21,3 +21,5 @@ height="40px"/></a>
 [Chapter 05. 책임 할당하기](https://moondongmin.notion.site/Chapter-05-11c357c44e5680738990dc3b6d04b381?pvs=4)
 
 [Chapter 07. 객체 분해](https://www.notion.so/moondongmin/Chapter-07-125357c44e5680ceae02ece881f0fe61?pvs=4)
+
+[Chapter 08 의존성 관리하기](https://moondongmin.notion.site/Chapter-08-12b357c44e5680bfa3dee902b7d32cad?pvs=4)
