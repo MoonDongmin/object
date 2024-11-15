@@ -22,4 +22,6 @@ height="40px"/></a>
 
 [Chapter 07. 객체 분해](https://www.notion.so/moondongmin/Chapter-07-125357c44e5680ceae02ece881f0fe61?pvs=4)
 
-[Chapter 08 의존성 관리하기](https://moondongmin.notion.site/Chapter-08-12b357c44e5680bfa3dee902b7d32cad?pvs=4)
+[Chapter 08. 의존성 관리하기](https://moondongmin.notion.site/Chapter-08-12b357c44e5680bfa3dee902b7d32cad?pvs=4)
+
+[Chapter 11. 합성과 유연한 설계](https://moondongmin.notion.site/Chapter-11-13d357c44e5680ce85a9c5400305805a?pvs=4)
