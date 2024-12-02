@@ -1,18 +1,25 @@
+import {DateTimeInterval} from "./dateTimeInterval";
+
 export class Call {
-    private from: Date;
-    private to: Date;
+    private interval: DateTimeInterval;
 
     constructor(from: Date, to: Date) {
-        this.from = from;
-        this.to = to;
+        this.interval = DateTimeInterval.of(from, to);
     }
 
-    getDuration(): number {
-        // Duration in milliseconds
-        return this.to.getTime() - this.from.getTime();
+    public getDuration(): number {
+        return this.interval.duration();
     }
 
-    getFrom(): Date {
-        return this.from;
+    public getFrom(): Date {
+        return this.interval.getFrom();
+    }
+
+    public getTo(): Date {
+        return this.interval.getTo();
+    };
+
+    public getInterval(): DateTimeInterval {
+        return this.interval;
     }
 }
