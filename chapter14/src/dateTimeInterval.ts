@@ -43,4 +43,50 @@ export class DateTimeInterval {
     public getTo(): Date {
         return this.to;
     }
+
+    public splitByDay(): DateTimeInterval[] {
+        const days = this.days();
+
+        if (days > 0) {
+            return this.splitByDayRange(days);
+        }
+
+        return [DateTimeInterval.of(this.from, this.to)];
+    }
+
+    private days(): number {
+        const startOfDayFrom = new Date(this.from);
+        startOfDayFrom.setHours(0, 0, 0, 0);
+
+        const startOfDayTo = new Date(this.to);
+        startOfDayTo.setHours(0, 0, 0, 0);
+
+        const diff = startOfDayTo.getTime() - startOfDayFrom.getTime();
+        return diff / (1000 * 60 * 60 * 24); // 하루 단위로 차이 계산
+    }
+
+    private splitByDayRange(days: number): DateTimeInterval[] {
+        const result: DateTimeInterval[] = [];
+        this.addFirstDay(result);
+        this.addMiddleDays(result, days);
+        this.addLastDay(result);
+        return result;
+    }
+
+    private addFirstDay(result: DateTimeInterval[]): void {
+        result.push(DateTimeInterval.toMidnight(this.from));
+    }
+
+    private addMiddleDays(result: DateTimeInterval[], days: number): void {
+        for (let loop = 1; loop < days; loop++) {
+            const currentDate = new Date(this.from);
+            currentDate.setDate(currentDate.getDate() + loop);
+            result.push(DateTimeInterval.during(currentDate));
+        }
+    }
+
+
+    private addLastDay(result: DateTimeInterval[]): void {
+        result.push(DateTimeInterval.fromMidnight(this.to));
+    }
 }

@@ -22,4 +22,8 @@ export class Call {
     public getInterval(): DateTimeInterval {
         return this.interval;
     }
+
+    public splitByDay(): DateTimeInterval[] {
+        return this.interval.splitByDay();
+    }
 }
