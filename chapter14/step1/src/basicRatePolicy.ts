@@ -1,6 +1,8 @@
-import {RatePolicy} from "./ratePolicy";
-import {Phone}      from "./phone";
-import {Money}      from "./money/money";
+import {
+    Phone,
+    RatePolicy,
+}              from "./phone";
+import {Money} from "./money/money";
 import {Call}       from "./call";
 
 export abstract class BasicRatePolicy implements RatePolicy {

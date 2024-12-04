@@ -8,6 +8,7 @@ export class Call {
     }
 
     public getDuration(): number {
+        // Duration을 밀리초 단위의 숫자로 반환
         return this.interval.duration();
     }
 
@@ -17,7 +18,7 @@ export class Call {
 
     public getTo(): Date {
         return this.interval.getTo();
-    };
+    }
 
     public getInterval(): DateTimeInterval {
         return this.interval;
